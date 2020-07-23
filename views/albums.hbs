@@ -1,0 +1,13 @@
+{{!-- <h1>{{ results.artists.0.name }} Albums</h1> --}}
+
+<ul>
+  {{#each results}}
+    <li>
+        {{#if images}}
+        <img src="{{images.2.url}}" alt="{{name}}">
+        {{/if}}
+        <strong>{{name}}</strong>
+        <a href="/albums/{{id}}/tracks">View Tracks</a>
+    </li>
+  {{/each}}
+</ul>
